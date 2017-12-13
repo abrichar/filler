@@ -6,19 +6,17 @@
 /*   By: abrichar <abrichar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 17:26:52 by abrichar          #+#    #+#             */
-/*   Updated: 2017/12/13 16:13:01 by abrichar         ###   ########.fr       */
+/*   Updated: 2017/12/13 19:39:18 by abrichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
-//1: bas gauche| 2: haut droit| 3: bas droit|4: haut gauche
 
 int		strat1(t_filler *f)
 {
 	int i;
 	int j;
 
-	ft_putstr_fd("strat1\n", 2);
 	i = f->x_map;
 	while (i > 0)
 	{
@@ -43,7 +41,6 @@ int		strat2(t_filler *f)
 	int i;
 	int j;
 
-	ft_putstr_fd("strat1\n", 2);
 	i = 0;
 	while (i < f->x_map)
 	{
@@ -68,7 +65,6 @@ int		strat3(t_filler *f)
 	int i;
 	int j;
 
-	ft_putstr_fd("strat1\n", 2);
 	i = f->x_map;
 	while (i > 0)
 	{
@@ -93,7 +89,6 @@ int		strat4(t_filler *f)
 	int i;
 	int j;
 
-	ft_putstr_fd("strat1\n", 2);
 	i = 0;
 	while (i < f->x_map)
 	{
@@ -117,10 +112,10 @@ int	choose_strat(t_filler *f)
 {
 	if (f->x_ennemi < f->x_player)
 		if (f->y_ennemi < f->y_player)
-			return (strat3(f));
+			return (strat4(f));
 		else return(strat2(f));
 	else if (f->y_ennemi < f->y_player)
 		return(strat1(f));
 	else
-		return(strat4(f));
+		return(strat3(f));
 }

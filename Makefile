@@ -6,7 +6,7 @@
 #    By: abrichar <abrichar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/04 14:47:20 by abrichar          #+#    #+#              #
-#    Updated: 2017/12/13 15:42:45 by abrichar         ###   ########.fr        #
+#    Updated: 2017/12/13 16:25:18 by abrichar         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -26,7 +26,7 @@ LIB = libft/libft.a
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): begin $(OBJ)
 	@cd libft; $(MAKE) -f Makefile
 	gcc -o $(NAME) $(SRC) $(LIB) $(CPPFLAGS)
 	cp abrichar.filler players/.
@@ -44,7 +44,6 @@ fclean: clean end
 	/bin/rm -f $(LIB)
 
 re: fclean all
-	begin
 
 norme:
 	norminette $(SRC)

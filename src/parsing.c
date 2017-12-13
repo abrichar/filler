@@ -6,7 +6,7 @@
 /*   By: eliajin <abrichar@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/12 21:55:33 by eliajin           #+#    #+#             */
-/*   Updated: 2017/12/12 21:57:15 by eliajin          ###   ########.fr       */
+/*   Updated: 2017/12/13 17:56:23 by abrichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,13 @@ void	init_pos_player(t_filler *f)
 		j = 0;
 		while (j < f->y_map)
 		{
-			if (f->map[i][j] == f->letter_player)
+			if (f->map[i][j] == f->letter_player ||
+				f->map[i][j] == f->letter_player + 32)
 			{
 				f->x_player = i;
 				f->y_player = j;
 			}
-			else if (f->map[i][j] == f->letter_ennemi)
+			else if (f->map[i][j] != '.')
 			{
 				f->x_ennemi = i;
 				f->y_ennemi = j;

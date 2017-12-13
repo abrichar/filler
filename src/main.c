@@ -6,7 +6,7 @@
 /*   By: eliajin <abrichar@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 01:31:48 by eliajin           #+#    #+#             */
-/*   Updated: 2017/12/13 16:14:04 by abrichar         ###   ########.fr       */
+/*   Updated: 2017/12/13 17:35:13 by abrichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int			main(void)
 	f = (t_filler *)malloc(sizeof(t_filler));
 	f->nbr_player = ft_atoi(&line[10]);
 	f->letter_player = (f->nbr_player == 1) ? 'O' : 'X';
-	f->letter_ennemi = (f->letter_player == 'o') ? 'x' : 'o';
+	f->letter_ennemi = (f->nbr_player == 1) ? 'x' : 'o';
 	while (1)
 	{
 		get_next_line(0, &line);
