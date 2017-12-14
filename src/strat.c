@@ -6,13 +6,13 @@
 /*   By: abrichar <abrichar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 17:26:52 by abrichar          #+#    #+#             */
-/*   Updated: 2017/12/13 19:39:18 by abrichar         ###   ########.fr       */
+/*   Updated: 2017/12/14 17:04:25 by abrichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-int		strat1(t_filler *f)
+static int		strat1(t_filler *f)
 {
 	int i;
 	int j;
@@ -36,7 +36,7 @@ int		strat1(t_filler *f)
 	return (0);
 }
 
-int		strat2(t_filler *f)
+static int		strat2(t_filler *f)
 {
 	int i;
 	int j;
@@ -60,7 +60,7 @@ int		strat2(t_filler *f)
 	return (0);
 }
 
-int		strat3(t_filler *f)
+static int		strat3(t_filler *f)
 {
 	int i;
 	int j;
@@ -84,7 +84,7 @@ int		strat3(t_filler *f)
 	return (0);
 }
 
-int		strat4(t_filler *f)
+static int		strat4(t_filler *f)
 {
 	int i;
 	int j;
@@ -108,7 +108,7 @@ int		strat4(t_filler *f)
 	return (0);
 }
 
-int	choose_strat(t_filler *f)
+int					choose_strat(t_filler *f)
 {
 	if (f->x_ennemi < f->x_player)
 		if (f->y_ennemi < f->y_player)
