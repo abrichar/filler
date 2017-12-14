@@ -6,11 +6,16 @@
 /*   By: abrichar <abrichar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 17:26:52 by abrichar          #+#    #+#             */
-/*   Updated: 2017/12/14 17:04:25 by abrichar         ###   ########.fr       */
+/*   Updated: 2017/12/14 17:51:44 by abrichar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
+//stratégie Spécial Carli
+//Si je bloque en bas, je joue pour bloauer en haut !
+//comment faire ?
+//Don't know yet
+
 
 static int		strat1(t_filler *f)
 {
